@@ -1,4 +1,4 @@
-package com.myntra.android.speciesdetectionandroid
+package com.myntra.android.speciesdetectionandroid.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,7 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
-import com.myntra.android.speciesdetectionandroid.auth.Login
+import com.myntra.android.speciesdetectionandroid.R
+import com.myntra.android.speciesdetectionandroid.auth.LoginActivity
 import com.myntra.android.speciesdetectionandroid.ui.home.HomeFragment
 import com.myntra.android.speciesdetectionandroid.ui.profile.ProfileFragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         val pref = getPreferences(MODE_PRIVATE)
         val id = pref.getString("user", null)
         if (FirebaseAuth.getInstance().currentUser == null) {
-            startActivity(Intent(this, Login::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         } else {
             Toast.makeText(

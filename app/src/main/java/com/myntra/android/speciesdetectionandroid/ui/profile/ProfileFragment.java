@@ -23,13 +23,7 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
 
        View view=inflater.inflate(R.layout.fragment_profile, container, false);
-//       aboutus=view.findViewById(R.id.cardAbout);
-//       aboutus.setOnClickListener(new View.OnClickListener() {
-//           @Override
-//           public void onClick(View v) {
-//               startActivity(new Intent(getContext(),About_us.class));
-//           }
-//       });
+
        return view;
     }
 }

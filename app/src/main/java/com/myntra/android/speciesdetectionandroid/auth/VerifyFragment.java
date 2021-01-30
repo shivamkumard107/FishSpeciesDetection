@@ -1,6 +1,5 @@
 package com.myntra.android.speciesdetectionandroid.auth;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -22,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 import com.myntra.android.speciesdetectionandroid.Constants;
-import com.myntra.android.speciesdetectionandroid.MainActivity;
+import com.myntra.android.speciesdetectionandroid.ui.MainActivity;
 import com.myntra.android.speciesdetectionandroid.R;
 
 import java.util.concurrent.TimeUnit;

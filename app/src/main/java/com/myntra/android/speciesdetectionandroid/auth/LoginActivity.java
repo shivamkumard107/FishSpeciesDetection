@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.myntra.android.speciesdetectionandroid.R;
 
 
-public class Login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
