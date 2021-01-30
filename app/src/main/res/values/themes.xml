@@ -20,7 +20,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-<!--        <item name="fontFamily">@font/poppins_family</item>-->
+        <item name="fontFamily">@font/roboto</item>
     </style>
 
     <style name="ButtonFilled" parent="Widget.MaterialComponents.Button.UnelevatedButton">
