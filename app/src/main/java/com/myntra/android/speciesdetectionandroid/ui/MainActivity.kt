@@ -1,8 +1,11 @@
 package com.myntra.android.speciesdetectionandroid.ui
 
+import android.content.ContentResolver
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
+import android.webkit.MimeTypeMap
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -14,6 +17,7 @@ import com.myntra.android.speciesdetectionandroid.ui.catcharea.HeatMapDemoFragme
 import com.myntra.android.speciesdetectionandroid.ui.home.HomeFragment
 import com.myntra.android.speciesdetectionandroid.ui.profile.ProfileFragment
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
     private val navListener =
@@ -32,6 +36,24 @@ class MainActivity : AppCompatActivity() {
             ).commit()
             true
         }
+
+    private fun getFileExtension(uri: Uri): String? {
+        val contentResolver: ContentResolver = this.getContentResolver()
+        val mimeTypeMap = MimeTypeMap.getSingleton()
+        return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri))
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 12345 && resultCode == RESULT_OK
+            && data != null && data.getData() != null){
+            val imageUri = data.getData();
+            val intent = Intent(this,CameraActivity::class.java)
+            intent.putExtra("uri",imageUri.toString())
+            startActivity(intent)
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,6 +80,13 @@ class MainActivity : AppCompatActivity() {
                 R.id.fragment_container,
                 HomeFragment()
             ).commit()
+        }
+
+        fab.setOnClickListener{
+            val intent = Intent()
+            intent.type = "image/*"
+            intent.action = Intent.ACTION_GET_CONTENT
+            startActivityForResult(intent, 12345)
         }
     }
 }

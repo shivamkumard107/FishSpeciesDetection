@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CameraActivity">
+    <include
+        android:visibility="gone"
+        android:id="@+id/fishInformationFrameLayout"
+        layout="@layout/fish_catched_information"/>
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:src="@drawable/lutjanus_sebae"
+            android:scaleType="fitCenter"
+            android:id="@+id/fishImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:visibility="gone"
+            android:layout_marginBottom="100dp"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/saveImageButton"
+                android:layout_margin="5dp"
+                android:text="SAVE PICTURE"
+                android:textColor="@android:color/white"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/helpButton"
+                android:layout_margin="5dp"
+                android:text="NEED HELP ?"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/common_google_signin_btn_text_light_focused"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </FrameLayout>
+</FrameLayout>
