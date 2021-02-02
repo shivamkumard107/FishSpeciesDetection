@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class HeatMapDemoFragment extends HeatMapFragment {
+public class HeatMapDemoFragment extends HeatMapFragment implements DiseaseCountSheet.BottomSheetListener {
 
     /**
      * Alternative radius for convolution
@@ -96,9 +96,9 @@ public class HeatMapDemoFragment extends HeatMapFragment {
             }
         }
 
-//        DiseaseCountSheet bottomSheet = new DiseaseCountSheet();
-//
-//        bottomSheet.show(getSupportFragmentManager(), "exampleBottomSheet");
+        DiseaseCountSheet bottomSheet = new DiseaseCountSheet();
+
+        bottomSheet.show(getActivity().getSupportFragmentManager(), "exampleBottomSheet");
     }
 
     @Override
@@ -217,6 +217,11 @@ public class HeatMapDemoFragment extends HeatMapFragment {
         }
         mOverlay.clearTileCache();
         mDefaultOpacity = !mDefaultOpacity;
+    }
+
+    @Override
+    public void onButtonClicked(String text) {
+        Toast.makeText(getContext(), text, Toast.LENGTH_SHORT).show();
     }
 
 //    @Override

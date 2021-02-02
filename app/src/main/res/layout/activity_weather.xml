@@ -20,8 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingStart="16dp"
-        android:paddingEnd="16dp"
         android:visibility="gone"
+        android:paddingEnd="16dp"
         tools:context=".ui.home.WeatherActivity">
 
         <ImageView
@@ -76,6 +76,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Temperature"
+                android:drawableEnd="@drawable/ic_thermometer"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
 
@@ -91,6 +92,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Rainfall"
+                android:drawableEnd="@drawable/ic_rain"
+                android:drawablePadding="4dp"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
 
@@ -106,6 +109,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Humidity"
+                android:drawableEnd="@drawable/ic_humidity"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
 
@@ -131,6 +135,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sunrise"
+                android:drawableEnd="@drawable/ic_sun_rise"
+                android:drawablePadding="4dp"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
 
@@ -146,6 +152,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Sunset"
+                android:drawableEnd="@drawable/ic_sun_set"
+                android:drawablePadding="4dp"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
 
@@ -161,6 +169,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Moonrise"
+                android:drawablePadding="4dp"
+                android:drawableEnd="@drawable/ic_moon_rise"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
 
@@ -176,6 +186,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Moonset"
+                android:drawableEnd="@drawable/ic_moon_set"
+                android:drawablePadding="4dp"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
 

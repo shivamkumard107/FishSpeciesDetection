@@ -15,7 +15,7 @@
         android:layout_height="wrap_content">
         <TextView
             android:textSize="25sp"
-            android:textStyle="bold"
+            
             android:textColor="@android:color/black"
             android:text="Want To Help Us?"
             android:layout_width="match_parent"
@@ -44,7 +44,7 @@
 
             <TextView
                 android:id="@+id/buttonHelpUs"
-                android:textStyle="bold"
+                
                 android:layout_marginLeft="25dp"
                 android:textSize="22sp"
                 android:textColor="#000058"

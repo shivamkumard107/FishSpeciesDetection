@@ -13,13 +13,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.myntra.android.speciesdetectionandroid.R
 import com.myntra.android.speciesdetectionandroid.auth.LoginActivity
+import com.myntra.android.speciesdetectionandroid.ui.catcharea.DiseaseCountSheet
 import com.myntra.android.speciesdetectionandroid.ui.catcharea.HeatMapDemoFragment
 import com.myntra.android.speciesdetectionandroid.ui.home.HomeFragment
 import com.myntra.android.speciesdetectionandroid.ui.profile.ProfileFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), DiseaseCountSheet.BottomSheetListener {
     private val navListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item: MenuItem ->
             var selectedFragment: Fragment? = null
@@ -88,5 +89,9 @@ class MainActivity : AppCompatActivity() {
             intent.action = Intent.ACTION_GET_CONTENT
             startActivityForResult(intent, 12345)
         }
+    }
+
+    override fun onButtonClicked(text: String?) {
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
     }
 }
