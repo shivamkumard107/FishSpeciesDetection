@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SpeciesDetectionAndroid</string>
+    <string name="app_name">AAIDeS</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="attrib_format"><![CDATA[Data from &lt;a href = \"%s\">data.gov.in&lt;/a>, modified under &lt;a href = \"http://creativecommons.org/licenses/by/3.0/au/\">CC BY 3.0 AU&lt;/a>]]></string>
