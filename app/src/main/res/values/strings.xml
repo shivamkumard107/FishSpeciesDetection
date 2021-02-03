@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">AAIDeS</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello empty fragments</string>
+    <string name="hello_blank_fragment" translatable="false">Hello empty fragments</string>
     <string name="attrib_format" translatable="false"><![CDATA[Data from &lt;a href = \"%s\">data.gov.in&lt;/a>, modified under &lt;a href = \"http://creativecommons.org/licenses/by/3.0/au/\">CC BY 3.0 AU&lt;/a>]]></string>
     <string-array name="heatmaps_datasets_array">
         <item>Police</item>
@@ -29,5 +29,6 @@
     <string name="verified_document">Verified Document</string>
     <string name="verified_fisherman_id_card">Verified Fisherman ID card</string>
     <string name="log_out">LOG OUT</string>
+    <string name="recent_catch_history">Recent Catch History</string>
 
 </resources>

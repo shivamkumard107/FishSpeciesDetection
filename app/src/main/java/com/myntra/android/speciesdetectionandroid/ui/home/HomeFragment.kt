@@ -43,6 +43,9 @@ class HomeFragment : Fragment() {
                 } else if (which == 2) {
                     setLocale("su")
                     activity!!.recreate()
+                } else if (which == 3) {
+                    setLocale("vi")
+                    activity!!.recreate()
                 }
                 dialog.dismiss()
             })

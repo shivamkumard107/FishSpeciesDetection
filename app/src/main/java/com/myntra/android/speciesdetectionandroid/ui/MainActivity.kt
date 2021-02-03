@@ -15,6 +15,7 @@ import com.myntra.android.speciesdetectionandroid.R
 import com.myntra.android.speciesdetectionandroid.auth.LoginActivity
 import com.myntra.android.speciesdetectionandroid.ui.catcharea.DiseaseCountSheet
 import com.myntra.android.speciesdetectionandroid.ui.catcharea.HeatMapDemoFragment
+import com.myntra.android.speciesdetectionandroid.ui.history.CatchHistoryFragment
 import com.myntra.android.speciesdetectionandroid.ui.home.HomeFragment
 import com.myntra.android.speciesdetectionandroid.ui.profile.ProfileFragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity(), DiseaseCountSheet.BottomSheetListener 
                 R.id.nav_home -> selectedFragment = HomeFragment()
                 R.id.nav_catch -> selectedFragment = HeatMapDemoFragment()
                 R.id.nav_camera -> selectedFragment = HomeFragment()
-                R.id.nav_catch_history -> selectedFragment = HomeFragment()
+                R.id.nav_catch_history -> selectedFragment = CatchHistoryFragment()
                 R.id.nav_profile -> selectedFragment = ProfileFragment()
             }
             supportFragmentManager.beginTransaction().replace(
