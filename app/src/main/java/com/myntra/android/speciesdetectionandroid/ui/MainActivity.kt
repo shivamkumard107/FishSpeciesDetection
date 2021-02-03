@@ -4,6 +4,7 @@ import android.content.ContentResolver
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import android.webkit.MimeTypeMap
 import android.widget.Toast
@@ -17,11 +18,24 @@ import com.myntra.android.speciesdetectionandroid.ui.catcharea.DiseaseCountSheet
 import com.myntra.android.speciesdetectionandroid.ui.catcharea.HeatMapDemoFragment
 import com.myntra.android.speciesdetectionandroid.ui.history.CatchHistoryFragment
 import com.myntra.android.speciesdetectionandroid.ui.home.HomeFragment
+import com.myntra.android.speciesdetectionandroid.ui.notif.NotificationActivity
 import com.myntra.android.speciesdetectionandroid.ui.profile.ProfileFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity(), DiseaseCountSheet.BottomSheetListener {
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.notif_menu,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        startActivity(Intent(this,NotificationActivity::class.java))
+        return super.onOptionsItemSelected(item)
+    }
+
+
     private val navListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item: MenuItem ->
             var selectedFragment: Fragment? = null

@@ -20,6 +20,13 @@ public class NotificationModel {
         return notifType;
     }
 
+    public NotificationModel(String title, String desc, String timestamp, String notifType) {
+        this.title = title;
+        this.desc = desc;
+        this.timestamp = timestamp;
+        this.notifType = notifType;
+    }
+
     private String timestamp;
     private String notifType; //warning, alert or good
 }
