@@ -167,7 +167,7 @@ public class HeatMapDemoFragment extends HeatMapFragment implements DiseaseCount
                 // Check if need to instantiate (avoid setData etc twice)
                 if (mProvider == null) {
                     mProvider = new HeatmapTileProvider.Builder().data(
-                            mLists.get("Medicare Offices").getData()).build();
+                            mLists.get("Medicare Office").getData()).build();
                     mOverlay = getMap().addTileOverlay(new TileOverlayOptions().tileProvider(mProvider));
                     // Render links
 //                    attribution.setMovementMethod(LinkMovementMethod.getInstance());

@@ -1,18 +1,33 @@
 <resources>
     <string name="app_name">AAIDeS</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="attrib_format"><![CDATA[Data from &lt;a href = \"%s\">data.gov.in&lt;/a>, modified under &lt;a href = \"http://creativecommons.org/licenses/by/3.0/au/\">CC BY 3.0 AU&lt;/a>]]></string>
+    <string name="hello_blank_fragment">Hello empty fragments</string>
+    <string name="attrib_format" translatable="false"><![CDATA[Data from &lt;a href = \"%s\">data.gov.in&lt;/a>, modified under &lt;a href = \"http://creativecommons.org/licenses/by/3.0/au/\">CC BY 3.0 AU&lt;/a>]]></string>
     <string-array name="heatmaps_datasets_array">
         <item>Police</item>
         <item>Medicare</item>
     </string-array>
-    <string name="medicare">Medicare Offices</string>
-    <string name="police_stations_url">http://data.gov.au/dataset/police-station-locations/resource/76110b24-0f0a-4c29-9583-3f99eaba486c</string>
-    <string name="medicare_url">http://data.gov.au/dataset/location-of-medicare-offices/resource/5d38e1be-4011-49c4-8b8b-75405eeb1088</string>
-    <string name="police_stations">Police Stations in Victoria</string>
-    <string name="weather">Weather</string>
-    <string name="compass">Compass</string>
+    <string name="medicare">Medicare Office</string>
+    <string name="police_stations_url" translatable="false">http://data.gov.au/dataset/police-station-locations/resource/76110b24-0f0a-4c29-9583-3f99eaba486c</string>
+    <string name="medicare_url" translatable="false">http://data.gov.au/dataset/location-of-medicare-offices/resource/5d38e1be-4011-49c4-8b8b-75405eeb1088</string>
+    <string name="police_stations">Victoria Police Station</string>
     <string name="notification">Notification</string>
+    <string name="notif_update">We have a bad weather at 07:00. Please don’t go fishing</string>
+    <string name="weather_forecast_heading">Weather Forecast</string>
+    <string name="temperature">22°C - Mist</string>
+    <string name="place1">Dwarka </string>
+    <string name="place2">New Delhi, India</string>
+    <string name="compass">Compass</string>
+    <string name="weather">Weather</string>
+    <string name="language">Language</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_catch">Catch</string>
+    <string name="nav_history">History</string>
+    <string name="nav_profile">Profile</string>
+    <string name="shivam_kumar">Shivam Kumar</string>
+    <string name="fisherman">Fisherman</string>
+    <string name="verified_document">Verified Document</string>
+    <string name="verified_fisherman_id_card">Verified Fisherman ID card</string>
+    <string name="log_out">LOG OUT</string>
 
 </resources>
