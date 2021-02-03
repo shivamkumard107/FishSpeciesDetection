@@ -81,5 +81,6 @@ dependencies {
 
 
     compile 'cc.cloudist.acplibrary:library:1.2.1'
+    implementation 'com.github.arbelkilani:Compass-View:v1.1.1'
 
 }

@@ -31,6 +31,9 @@ class CameraActivity : AppCompatActivity() {
         return c?.getString(c.getColumnIndex(OpenableColumns.DISPLAY_NAME))
     }
 
+    companion object {
+        var bool = false
+    }
 
     /**
      * Name of the species -
@@ -75,7 +78,10 @@ class CameraActivity : AppCompatActivity() {
             fishImageView.setImageResource(res)
             linearLayout.visibility = View.VISIBLE
         }, 5000)
-
+        save_info.setOnClickListener {
+            Toast.makeText(this, "Information Saved!", Toast.LENGTH_SHORT).show()
+            this.finish()
+        }
 
         saveImageButton.setOnClickListener {
             val dialog = AlertDialog.Builder(this)
@@ -85,18 +91,29 @@ class CameraActivity : AppCompatActivity() {
             val builder = dialog.create()
             view.findViewById<TextView>(R.id.save).setOnClickListener {
                 val weight = view.findViewById<EditText>(R.id.editTextWeight).text
-                if(weight.isEmpty()){
-                    Toast.makeText(this,"Enter weight",Toast.LENGTH_SHORT).show()
-                }
-                else{
+                if (weight.isEmpty()) {
+                    Toast.makeText(this, "Enter weight", Toast.LENGTH_SHORT).show()
+                } else {
                     builder.dismiss()
                     fishNameTextView.text = fileName
                     fishWeightTextView.text = weight
-                    fishImageViewFinal.setImageResource(resources.getIdentifier(
-                        "com.myntra.android.speciesdetectionandroid:drawable/" + fileName,
-                        null,
-                        null
-                    ))
+                    bool = if (bool) {
+                        selling_price.text = "$2.5"
+                        estimated_earning.text = "$95 - $102"
+                        lutjanus.visibility = View.VISIBLE
+                        fishImageViewFinal.setImageResource(R.drawable.result_mixed)
+                        false;
+                    } else {
+                        selling_price.text = "$3"
+                        estimated_earning.text = "$20 - $30"
+                        lutjanus.visibility = View.GONE
+                        ivfish1.setImageResource(R.drawable.sample_fish)
+                        tvfish1.text = "pseudanthias_squamipinnis"
+                        tvfish1ratio.text = "100% from overall catch result"
+                        fishImageViewFinal.setImageResource(R.drawable.result_pseudanthias_squamipinnis_)
+
+                        true;
+                    }
                     frameLayout.visibility = View.GONE
                     fishInformationFrameLayout.visibility = View.VISIBLE
                 }
