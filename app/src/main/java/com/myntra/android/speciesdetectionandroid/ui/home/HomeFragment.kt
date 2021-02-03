@@ -29,6 +29,13 @@ class HomeFragment : Fragment() {
         cv1.setOnClickListener { startActivity(Intent(context, CompassActivity::class.java)) }
         cv2.setOnClickListener { startActivity(Intent(context, WeatherActivity::class.java)) }
         cv3.setOnClickListener { changeLanguage() }
+        cv4.setOnClickListener {
+            val launchIntent: Intent? =
+                activity!!.getPackageManager().getLaunchIntentForPackage("org.tensorflow.lite.examples.detection")
+            if (launchIntent != null) {
+                startActivity(launchIntent) //null pointer check in case package name was not found
+            }
+        }
     }
 
     private fun changeLanguage() {

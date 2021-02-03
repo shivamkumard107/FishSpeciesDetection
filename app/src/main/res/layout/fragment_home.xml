@@ -115,6 +115,8 @@
             android:clickable="true"
             android:elevation="8dp"
             android:focusable="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="40dp"
             android:foreground="?attr/selectableItemBackgroundBorderless"
             app:cardCornerRadius="6dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -158,9 +160,11 @@
             android:layout_marginStart="8dp"
             android:clickable="true"
             android:elevation="8dp"
+            android:layout_marginTop="8dp"
             android:focusable="true"
             android:foreground="?attr/selectableItemBackgroundBorderless"
             app:cardCornerRadius="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/cv1"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -198,14 +202,14 @@
             android:id="@+id/cv3"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginTop="8dp"
             android:clickable="true"
             android:elevation="8dp"
-            android:layout_marginStart="8dp"
             android:focusable="true"
             android:foreground="?attr/selectableItemBackgroundBorderless"
             app:cardCornerRadius="6dp"
-            app:layout_constraintStart_toEndOf="@+id/cv2"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintStart_toStartOf="@+id/cv1"
+            app:layout_constraintTop_toBottomOf="@+id/cv1">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl3"
@@ -234,6 +238,48 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:elevation="8dp"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:cardCornerRadius="6dp"
+            app:layout_constraintStart_toStartOf="@+id/cv2"
+            app:layout_constraintTop_toBottomOf="@+id/cv2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FAFAFA"
+                android:backgroundTint="@color/gray">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/app_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Detection"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView6" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 

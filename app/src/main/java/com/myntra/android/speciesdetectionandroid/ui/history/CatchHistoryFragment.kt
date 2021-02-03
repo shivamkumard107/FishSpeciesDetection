@@ -12,6 +12,7 @@ class CatchHistoryFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         return inflater.inflate(R.layout.fragment_catch_history, container, false)
     }
 
