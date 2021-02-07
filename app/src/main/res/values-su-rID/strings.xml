@@ -30,4 +30,5 @@
     <string name="verified_document">Dokumen Terverifikasi</string>
     <string name="verified_fisherman_id_card">Kartu ID Nelayan Terverifikasi</string>
     <string name="log_out">Keluar</string>
+    <string name="recent_catch_history">Sejarah Tangkapan Terbaru</string>
 </resources>

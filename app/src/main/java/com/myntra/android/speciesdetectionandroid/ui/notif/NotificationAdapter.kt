@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.myntra.android.speciesdetectionandroid.R
+import kotlinx.android.synthetic.main.notif_item.view.*
 
 class NotificationAdapter(
     private val context: Context,
@@ -27,13 +28,13 @@ class NotificationAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.title.text = list[position].title
-        holder.desc.text = list[position].desc
-        holder.timestamp.text = list[position].timestamp
+        holder.itemView.tvTitle.text = list[position].title
+        holder.itemView.tvDescription.text = list[position].desc
+        holder.itemView.tvTimeStamp.text = list[position].timestamp
         when(list[position].notifType){
-            "warning" -> Glide.with(context).load(R.drawable.warning).into(holder.notifType)
-            "alert" -> Glide.with(context).load(R.drawable.alert).into(holder.notifType)
-            "good" -> Glide.with(context).load(R.drawable.heart).into(holder.notifType)
+            "warning" -> Glide.with(context).load(R.drawable.warning).into(holder.itemView.notif_type)
+            "alert" -> Glide.with(context).load(R.drawable.alert).into(holder.itemView.notif_type)
+            "good" -> Glide.with(context).load(R.drawable.heart).into(holder.itemView.notif_type)
         }
     }
 

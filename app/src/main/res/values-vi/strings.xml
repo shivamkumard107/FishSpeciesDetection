@@ -31,4 +31,7 @@
     <string name="fisherman">Ngư dân</string>
     <string name="verified_document">Tài liệu đã xác minh</string>
     <string name="verified_fisherman_id_card">Thẻ căn cước ngư dân đã được xác minh</string>
+    <string name="detection">Phát hiện</string>
+    <string name="recent_catch_history">Lịch sử bắt gần đây</string>
+    <string name="log_out">ĐĂNG XUẤT</string>
 </resources>

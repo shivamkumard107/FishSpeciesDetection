@@ -30,5 +30,6 @@
     <string name="verified_fisherman_id_card">Verified Fisherman ID card</string>
     <string name="log_out">LOG OUT</string>
     <string name="recent_catch_history">Recent Catch History</string>
+    <string name="detection">Detection</string>
 
 </resources>
